@@ -21,7 +21,7 @@
 <img alt="Ladner Traps crab logo" src="assets/ladner-traps-crab-logo.jpg"/>
 <span>Ladner Traps</span>
 </a>
-<nav aria-label="Primary navigation" class="navlinks">
+<nav id="primary-nav" aria-label="Primary navigation" class="navlinks">
 <a href="index.html" class="is-active">Home</a>
 <a href="about.html">About</a>
 <div class="nav-item nav-mega" data-mega>
@@ -107,9 +107,16 @@
 <a href="contact.html">Contact</a>
 <a class="btn btn-primary" href="contact.html#quote">Get a Quote</a>
 </nav>
+<div class="nav-actions">
+<button type="button" class="nav-menu-toggle" aria-expanded="false" aria-controls="primary-nav">
+<span class="nav-menu-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+<span class="visually-hidden">Menu</span>
+</button>
 <a class="btn btn-primary mobile-toggle" href="contact.html#quote">Quote</a>
 </div>
+</div>
 </header>
+<div class="nav-backdrop" hidden></div>
 <main id="top">
 <section aria-labelledby="hero-title" class="hero">
 <div class="container hero-grid">

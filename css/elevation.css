@@ -1337,7 +1337,8 @@ footer a:hover { color: #fff !important; }
 
 /* ---------- Mega-menu panel (UI.com-style products dropdown) ---------- */
 .nav-item.nav-mega { position: static !important; }
-.site-header { position: sticky; top: 0; z-index: 60; background: rgba(255,255,255,.97); backdrop-filter: blur(10px); }
+/* Opaque background only — backdrop-filter traps position:fixed nav inside the header */
+.site-header { position: sticky; top: 0; z-index: 60; background: rgba(255,255,255,.98); }
 
 .mega-panel {
   position: absolute;
@@ -1506,8 +1507,306 @@ footer a:hover { color: #fff !important; }
 @media (max-width: 1024px) {
   .mega-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
-@media (max-width: 760px) {
-  .mega-panel { display: none !important; }
+
+/* ---------- Mobile navigation drawer ---------- */
+.nav-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 55;
+  background: rgba(4, 16, 31, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+body.is-nav-open .nav-backdrop {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.35s ease, visibility 0s;
+}
+
+@keyframes nav-drawer-item-in {
+  from {
+    opacity: 0;
+    transform: translateX(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.nav-menu-toggle {
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink-deep);
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: transparent;
+  appearance: none;
+  transition: color 0.2s ease;
+}
+.nav-menu-toggle:focus,
+.nav-menu-toggle:focus-visible,
+.nav-menu-toggle:active {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+.nav-menu-toggle:hover,
+.site-header.is-menu-open .nav-menu-toggle {
+  color: var(--accent);
+}
+.nav-menu-toggle-icon {
+  display: grid;
+  gap: 6px;
+  width: 22px;
+}
+.nav-menu-toggle-icon span {
+  display: block;
+  height: 2.5px;
+  background: currentColor;
+  transition: transform 0.22s ease, opacity 0.22s ease;
+}
+.site-header.is-menu-open .nav-menu-toggle-icon span:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+.site-header.is-menu-open .nav-menu-toggle-icon span:nth-child(2) {
+  opacity: 0;
+}
+.site-header.is-menu-open .nav-menu-toggle-icon span:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+
+@media (min-width: 901px) {
+  .navlinks {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    transform: none;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-header { z-index: 70; }
+  .nav { gap: 12px; }
+  .navlinks {
+    --nav-drawer-pad: 24px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 80;
+    width: min(100%, 22rem);
+    margin: 0;
+    padding: 0 0 32px;
+    padding-top: max(20px, env(safe-area-inset-top, 0px));
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background: #fff;
+    border-right: 1.5px solid var(--rule);
+    box-shadow: 18px 0 48px rgba(7, 24, 68, 0.18);
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(-100%);
+    transition: transform 0.42s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s linear 0.42s;
+  }
+  body.is-nav-open .navlinks {
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+    transition: transform 0.42s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s;
+  }
+  .navlinks > a:not(.btn),
+  .navlinks > .nav-item {
+    opacity: 0;
+    transform: translateX(-18px);
+  }
+  body.is-nav-open .navlinks > a:not(.btn),
+  body.is-nav-open .navlinks > .nav-item,
+  body.is-nav-open .navlinks > a.btn {
+    animation: nav-drawer-item-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  body.is-nav-open .navlinks > :nth-child(1) { animation-delay: 0.1s; }
+  body.is-nav-open .navlinks > :nth-child(2) { animation-delay: 0.14s; }
+  body.is-nav-open .navlinks > :nth-child(3) { animation-delay: 0.18s; }
+  body.is-nav-open .navlinks > :nth-child(4) { animation-delay: 0.22s; }
+  body.is-nav-open .navlinks > :nth-child(5) { animation-delay: 0.26s; }
+  /* Beat global .navlinks > a:not(.btn) { padding: 24px 0 } from nav refinement */
+  .navlinks > a:not(.btn),
+  .navlinks > .nav-item .nav-parent {
+    display: flex !important;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px var(--nav-drawer-pad) !important;
+    border-bottom: 1px solid var(--rule-soft);
+    font-size: 1.05rem !important;
+    line-height: 1.2 !important;
+    box-sizing: border-box;
+  }
+  .navlinks > .nav-item {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 !important;
+    border-bottom: 0;
+  }
+  .navlinks > a.btn {
+    margin: 20px var(--nav-drawer-pad) 0;
+    width: calc(100% - (var(--nav-drawer-pad) * 2));
+    padding: 16px var(--nav-drawer-pad) !important;
+    justify-content: center;
+    border-bottom: 0;
+    box-sizing: border-box;
+  }
+  .navlinks > a:not(.btn)::after,
+  .navlinks > .nav-item .nav-parent::before {
+    display: none;
+  }
+  .nav-item.nav-mega {
+    flex-direction: column;
+    align-items: stretch;
+    position: relative !important;
+  }
+  .nav-item.nav-mega .nav-parent {
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    font: inherit;
+    text-align: left;
+    text-decoration: none;
+    color: inherit;
+  }
+  .nav-item.nav-mega .nav-parent::after {
+    transition: transform 0.2s ease;
+  }
+  .nav-item.nav-mega.is-open .nav-parent::after {
+    transform: rotate(-135deg) translateY(-2px);
+  }
+  .nav-item.nav-mega .mega-panel {
+    position: static !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    box-shadow: none;
+    border: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    pointer-events: none;
+  }
+  .nav-item.nav-mega.is-open .mega-panel {
+    max-height: 1200px;
+    pointer-events: auto;
+  }
+  .nav-item.nav-mega .mega-inner {
+    padding: 0 0 8px;
+  }
+  .mega-subcats {
+    flex-direction: column;
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding: 0 var(--nav-drawer-pad);
+  }
+  .mega-subcats a.mm-subcat {
+    display: block;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 0.88rem;
+  }
+  .mega-subcats a.mm-subcat::after {
+    display: none;
+  }
+  .mega-cards {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0 var(--nav-drawer-pad);
+  }
+  .mega-cards a.mm-card {
+    flex-direction: row;
+    gap: 14px;
+    padding: 12px 10px;
+    border-top: 1px solid var(--rule-soft) !important;
+  }
+  .mega-cards a.mm-card .mm-card-thumb {
+    width: 72px;
+    min-width: 72px;
+    aspect-ratio: 1;
+    margin-bottom: 0;
+  }
+  .mega-cards a.mm-card .mm-card-meta strong {
+    font-size: 0.95rem;
+  }
+  .mega-cards a.mm-card .mm-card-meta span {
+    font-size: 0.78rem;
+  }
+  .mega-foot {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px var(--nav-drawer-pad) 0;
+    margin-top: 8px;
+  }
+  .nav-actions {
+    margin-left: auto;
+  }
+  .nav-actions .btn,
+  .nav-actions .nav-menu-toggle {
+    width: auto;
+  }
+  .nav-actions .mobile-toggle {
+    min-height: 46px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-actions .btn,
+  .nav-actions .nav-menu-toggle {
+    width: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navlinks,
+  .nav-backdrop,
+  .nav-menu-toggle-icon span,
+  .nav-item.nav-mega .mega-panel {
+    transition: none;
+    animation: none !important;
+  }
+  body.is-nav-open .navlinks > a:not(.btn),
+  body.is-nav-open .navlinks > .nav-item,
+  body.is-nav-open .navlinks > a.btn {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+  .navlinks > a:not(.btn),
+  .navlinks > .nav-item {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* ---------- Products-overview grid (uses links wrapping the card) ---------- */

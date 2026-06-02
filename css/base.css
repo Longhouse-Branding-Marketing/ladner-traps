@@ -55,8 +55,7 @@
       position: sticky;
       top: 0;
       z-index: 40;
-      background: rgba(251,250,247,.88);
-      backdrop-filter: blur(18px);
+      background: rgba(251,250,247,.98);
       border-bottom: 1px solid var(--line);
     }
     .nav { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; gap: 22px; }
@@ -464,7 +463,20 @@
     .footer-hours-row { display: flex; justify-content: space-between; gap: 18px; line-height: 1.7; }
     .copyright { border-top: 1px solid rgba(255,255,255,.12); margin-top: 36px; padding-top: 20px; color: rgba(255,255,255,.45); font-size: .86rem; }
 
-    .mobile-toggle { display: none; }
+    .mobile-toggle,
+    .nav-menu-toggle { display: none; }
+    .nav-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
 
 
 
@@ -682,8 +694,8 @@
       .zinc-hero-image { min-height: 300px; }
       .topbar .container { justify-content: center; text-align: center; }
       .topbar span:last-child { display: none; }
-      .navlinks { display: none; }
-      .mobile-toggle { display: inline-flex; }
+      .mobile-toggle,
+      .nav-menu-toggle { display: inline-flex; }
       .hero-grid, .legacy-grid, .quality-grid, .map-panel, .territory-panel, .quote-grid, .footer-grid, .brand-strip-grid, .buy-path-grid, .contact-grid { grid-template-columns: 1fr; }
       .footer-contact { padding-left: 0; border-left: 0; border-top: 1px solid rgba(255,255,255,.16); padding-top: 24px; }
       .hero-grid { padding: 64px 0 110px; gap: 30px; }
@@ -736,7 +748,7 @@
     body { background: #f6f6f3; }
     .container { width: min(1240px, calc(100% - 48px)); }
     .topbar { background: #0b0b0b; color: rgba(255,255,255,.78); text-transform: uppercase; font-weight: 800; letter-spacing: .06em; font-size: .72rem; }
-    header { background: rgba(255,255,255,.96); border-bottom: 1px solid #d9d9d4; backdrop-filter: blur(10px); }
+    header { background: rgba(255,255,255,.98); border-bottom: 1px solid #d9d9d4; }
     .nav { padding: 6px 0; }
     .brand img { width: 122px; height: 122px; border-radius: 0; object-fit: contain; box-shadow: none; }
     .navlinks { font-family: "Barlow Condensed", Inter, sans-serif; text-transform: uppercase; letter-spacing: .07em; font-size: 1.22rem; font-weight: 800; gap: 30px; color: #111; }
