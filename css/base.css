@@ -60,7 +60,7 @@
     }
     .nav { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; gap: 22px; }
     .brand { display: flex; align-items: center; gap: 13px; font-weight: 900; color: var(--navy); letter-spacing: .05em; }
-    .brand img { width: 82px; height: 82px; border-radius: 999px; object-fit: cover; box-shadow: 0 6px 24px rgba(11,36,99,.16); }
+    .brand img { width: 82px; height: 82px; border-radius: 999px; object-fit: contain; box-shadow: 0 6px 24px rgba(11,36,99,.16); }
     .brand span { display: none; }
     .navlinks { display: flex; align-items: center; gap: 26px; font-size: .9rem; color: #25344b; font-weight: 700; }
     .navlinks a:hover { color: var(--red); }
