@@ -1437,7 +1437,7 @@
     .prawn-gallery .crab-img img { object-fit: contain; padding: 12px; background: #fff; }
 
 /* V32 product-card image cleanup */
-.products .product-card .product-art{background:#f7f7f4;min-height:230px;display:flex;align-items:center;justify-content:center;padding:18px;border-bottom:1px solid rgba(10,22,43,.12);}
+.products .product-card .product-art{background:#fff;min-height:230px;display:flex;align-items:center;justify-content:center;padding:18px;border-bottom:1px solid rgba(10,22,43,.12);}
 .products .product-card .product-art svg{display:none;}
 .products .product-card .product-photo{width:100%;height:210px;object-fit:contain;display:block;filter:contrast(1.03) saturate(1.02);}
 @media (max-width: 760px){.products .product-card .product-art{min-height:190px}.products .product-card .product-photo{height:175px}}
