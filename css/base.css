@@ -808,7 +808,7 @@
     .product-art { background: #fff; border-bottom: 1px solid #d9d9d4; }
     .chip { border-radius: 0; text-transform: uppercase; letter-spacing: .05em; }
     .crab-hero-copy, .quality-panel, .quote-card, .zinc-hero-panel { background: linear-gradient(135deg, #05080d, #07172f 58%, #102f70); }
-    .crab-hero-image-wrap, .crab-img { background: #f2f2ee; }
+    .crab-hero-image-wrap, .crab-img { background: #fff; }
     .crab-hero-image-wrap img, .crab-img img { border-radius: 0; box-shadow: none; }
     .crab-feature-list span, .map-badge, .dist-meta { border-radius: 0; text-transform: uppercase; }
     .section-head { border-bottom: 2px solid #111; padding-bottom: 24px; }
