@@ -142,6 +142,7 @@
         ".hero-card",
         ".brand-strip-grid > div",
         ".quality-panel",
+        ".quality-video",
         ".quality-point",
         ".product-card",
         ".crab-hero-panel",
