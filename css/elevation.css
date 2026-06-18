@@ -563,13 +563,48 @@ section.quote > .container::before {
   background: #fff;
   position: relative;
 }
-.crab-card-body { padding: 26px 24px 28px !important; }
+.crab-img {
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.crab-img img {
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+.crab-card-body {
+  padding: 26px 24px 28px !important;
+  background: #fff !important;
+  border-top: 1.5px solid var(--rule) !important;
+  position: relative;
+  z-index: 1;
+}
 .crab-card-body h3 {
   font-family: "Barlow Condensed", Inter, sans-serif !important;
   font-size: 1.7rem !important;
   line-height: 1 !important;
+  color: var(--ink-deep) !important;
 }
-.crab-card-body p { font-size: .94rem; margin-top: 10px !important; }
+.crab-card-body p {
+  font-size: .94rem;
+  margin-top: 10px !important;
+  color: var(--ink-soft) !important;
+  line-height: 1.55 !important;
+}
+.trap-subhead h3 {
+  font-family: "Barlow Condensed", Inter, sans-serif !important;
+  font-size: clamp(2rem, 3vw, 3.4rem) !important;
+  line-height: .95 !important;
+  text-transform: uppercase;
+  letter-spacing: -.005em;
+  color: var(--ink-deep) !important;
+}
+.trap-subhead p { color: var(--ink-soft) !important; line-height: 1.55; }
 .crab-cta {
   border: 1.5px solid var(--rule);
   box-shadow: 10px 10px 0 var(--accent);

@@ -217,10 +217,30 @@
     .crab-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
     .crab-card { background: white; border: 1px solid var(--line); border-radius: 26px; overflow: hidden; box-shadow: 0 14px 38px rgba(7,24,68,.07); display: flex; flex-direction: column; }
     .crab-card-large { grid-column: span 1; }
-    .crab-img { height: 250px; background: linear-gradient(180deg, #f7f8fb, #eef2f6); display: grid; place-items: center; border-bottom: 1px solid var(--line); padding: 12px; }
-    .crab-img img { width: 100%; height: 100%; object-fit: contain; display: block; border-radius: 18px; }
-    .crab-card-body { padding: 22px; }
-    .crab-card-body p { margin-top: 10px; font-size: .95rem; }
+    .crab-img {
+      height: 250px;
+      min-height: 250px;
+      background: linear-gradient(180deg, #f7f8fb, #eef2f6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+      padding: 12px;
+    }
+    .crab-img img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      object-position: center center;
+      display: block;
+      border-radius: 18px;
+    }
+    .crab-card-body { padding: 22px; background: #fff; border-top: 1px solid var(--line); }
+    .crab-card-body h3 { color: var(--navy); }
+    .crab-card-body p { margin-top: 10px; font-size: .95rem; color: var(--ink); line-height: 1.55; }
     .crab-cta { margin-top: 22px; border-radius: 28px; padding: 26px; background: white; border: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 24px; box-shadow: 0 14px 38px rgba(7,24,68,.06); }
     .crab-cta strong { color: var(--navy); font-family: Fraunces, Georgia, serif; font-size: 1.35rem; }
     .crab-cta p { margin-top: 6px; max-width: 720px; }
@@ -1445,8 +1465,11 @@
 
     .trap-subhead { margin-top: 42px; }
     .trap-subhead h3 {
-      font-family: Fraunces, Georgia, serif;
-      font-size: clamp(1.5rem, 2.4vw, 2rem);
+      font-family: "Barlow Condensed", Inter, system-ui, sans-serif;
+      font-size: clamp(2rem, 3vw, 3.4rem);
+      line-height: .95;
+      text-transform: uppercase;
+      letter-spacing: -.005em;
       color: var(--navy);
       margin-top: 8px;
     }
