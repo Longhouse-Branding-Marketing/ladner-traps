@@ -67,7 +67,7 @@
         items: [
           { b: "Est. 1964", t: "Delta · British Columbia" },
           { b: "Pacific Coast", t: "California → Alaska" },
-          { b: "Commercial Grade", t: "Crab · Prawn · Black Cod" },
+          { b: "Commercial Grade", t: "Crab · Prawn" },
           { b: "Rigging", t: "Rope · Snaps · Hooks · Floats" },
           { b: "Prawn Super Bait", t: "Premier Canadian Distributor" },
           { b: "Marine Zincs", t: "Traps · Docks · Vessels" },
