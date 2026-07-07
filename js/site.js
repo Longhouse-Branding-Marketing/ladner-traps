@@ -139,7 +139,8 @@
 
     const candidates = document.querySelectorAll(
       [
-        ".hero-card",
+        ".hero-video",
+        ".hero-copy",
         ".brand-strip-grid > div",
         ".quality-panel",
         ".quality-video",

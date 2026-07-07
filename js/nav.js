@@ -57,14 +57,6 @@
         if (!item.contains(e.relatedTarget)) close();
       });
 
-      parent.addEventListener("click", function (e) {
-        if (!isMobileNav()) return;
-        e.preventDefault();
-        var expanded = item.classList.toggle("is-open");
-        parent.setAttribute("aria-expanded", expanded ? "true" : "false");
-        panel.setAttribute("aria-hidden", expanded ? "false" : "true");
-      });
-
       document.addEventListener("keydown", function (e) {
         if (e.key === "Escape") {
           if (isMobileNav() && closeMobileMenuFn) {
@@ -128,7 +120,6 @@
     nav.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
         if (!isMobileNav()) return;
-        if (link.classList.contains("nav-parent")) return;
         closeMenu();
       });
     });
