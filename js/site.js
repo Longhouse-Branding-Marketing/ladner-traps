@@ -15,6 +15,7 @@
   ready(function () {
     insertTickers();
     armReveal();
+    armHeritageCountUp();
   });
 
   /* ---------- Marquee ticker injection ---------- */
@@ -197,5 +198,35 @@
     );
 
     candidates.forEach((el) => obs.observe(el));
+  }
+
+  /* ---------- Hero heritage count-up ---------- */
+
+  function armHeritageCountUp() {
+    const el = document.querySelector(".hero-heritage-tag .heritage-number");
+    if (!el) return;
+
+    const start = 1;
+    const target = 60;
+    const duration = 3400;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      el.textContent = String(target);
+      return;
+    }
+
+    const easeOut = (t) => 1 - Math.pow(1 - t, 5);
+
+    el.textContent = String(start);
+    const startTime = performance.now();
+
+    function tick(now) {
+      const t = Math.min((now - startTime) / duration, 1);
+      const value = Math.round(start + (target - start) * easeOut(t));
+      el.textContent = String(value);
+      if (t < 1) requestAnimationFrame(tick);
+    }
+
+    requestAnimationFrame(tick);
   }
 })();

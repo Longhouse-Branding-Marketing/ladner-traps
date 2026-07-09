@@ -179,21 +179,6 @@ section.quote > .container::before {
   white-space: nowrap;
   overflow: hidden;
 }
-.hero .container::after {
-  content: "FILE №  LT — 0164  /  PACIFIC COAST CORRIDOR  /  CA → AK";
-  position: absolute;
-  right: -8px; top: 96px;
-  z-index: 3;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  color: rgba(255,255,255,.42);
-  font-family: "Barlow Condensed", Inter, sans-serif;
-  letter-spacing: .28em;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: .72rem;
-  padding: 4px 0;
-}
 
 .hero h1 {
   font-size: clamp(3rem, 5.8vw, 7.2rem);
@@ -841,6 +826,49 @@ header { border-bottom: 1.5px solid var(--rule) !important; }
 .topbar { border-bottom: 1px solid var(--rule); }
 .topbar .container { padding: 12px 0 !important; }
 
+.hero-heritage-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  align-self: flex-start;
+  margin: 0;
+  padding: 14px 22px 14px 18px;
+  background: rgba(201,40,34,.94);
+  border: 2px solid rgba(255,255,255,.22);
+  box-shadow: 0 18px 48px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.15);
+  color: #fff;
+  font-family: "Barlow Condensed", Inter, sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.2rem, 2.4vw, 1.85rem);
+  line-height: 1;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+.hero-heritage-tag .heritage-number {
+  font-size: clamp(2.6rem, 5.5vw, 4rem);
+  line-height: .85;
+  letter-spacing: -.02em;
+  color: #fff;
+  text-shadow: 0 4px 12px rgba(0,0,0,.25);
+  font-variant-numeric: tabular-nums;
+  min-width: 1.15em;
+  text-align: center;
+}
+.hero-heritage-tag .heritage-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: left;
+}
+.hero-heritage-tag .heritage-since {
+  font-size: .62rem;
+  letter-spacing: .22em;
+  opacity: .88;
+  font-weight: 700;
+}
+
 /* ---------- Footer ---------- */
 footer { background: #04101f !important; position: relative; }
 footer::before {
@@ -907,7 +935,6 @@ footer a:hover { color: #fff !important; }
     min-height: 240px;
   }
   .hero-actions { margin-top: 0; }
-  .hero .container::after { display: none; }
   section.quality > .container::before,
   section.products > .container::before,
   section.accessories-page > .container::before,
@@ -944,6 +971,14 @@ footer a:hover { color: #fff !important; }
   body::after { opacity: .04; }
   .hero h1 { font-size: clamp(2.8rem, 11vw, 4.6rem); }
   .hero .container::before { font-size: .62rem; letter-spacing: .18em; gap: 8px; }
+  .hero-heritage-tag {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 12px 16px;
+    width: 100%;
+  }
+  .hero-heritage-tag .heritage-number { font-size: clamp(2.8rem, 14vw, 3.4rem); }
   .lt-ticker span { font-size: .9rem; letter-spacing: .16em; }
   .brand-strip-grid div { padding: 26px 22px 24px !important; }
   .crab-hero-copy { padding: 32px 26px !important; }
