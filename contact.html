@@ -5,6 +5,16 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Contact Ladner Traps | Commercial Inquiries, Distributors & Hours</title>
 <meta content="Contact Ladner Traps for commercial inquiries, distributor info, business hours, address, and to submit a commercial quote form." name="description"/>
+<meta name="recaptcha-site-key" content="6LdN3kstAAAAAPbJy5fjuHvDsJJBsbklwsu5fsYr"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1GWHH8HS12"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1GWHH8HS12');
+</script>
 <link rel="stylesheet" href="css/base.css"/>
 <link rel="stylesheet" href="css/elevation.css"/>
 </head>
@@ -207,7 +217,7 @@
 <h3>Address</h3>
 <p><strong>Ladner Traps</strong><br/>A brand of Sealtech Manufacturing Inc.<br/>3593 River Road West<br/>Delta, BC V4K 3N2</p>
 <div aria-label="Google Map showing Ladner Traps address" class="map-block">
-<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=3593%20River%20Road%20West%2C%20Delta%2C%20BC%20V4K%203N2&amp;output=embed" title="Google Map to Ladner Traps"></iframe>
+<img alt="Map showing Ladner Traps at 3593 River Road West, Delta, BC" src="assets/ladner-traps-google-map.png"/>
 </div>
 <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=3593%20River%20Road%20West%2C%20Delta%2C%20BC%20V4K%203N2" rel="noopener" target="_blank">Open in Google Maps</a>
 </article>
@@ -241,21 +251,26 @@
 <li>Call for product availability: <a href="tel:+16049460281">(604) 946-0281</a></li>
 </ul>
 </aside>
-<form onsubmit="event.preventDefault(); alert('Thanks. This demo form is ready to connect to your email, CRM, or website backend.');">
+<form id="quote-form" novalidate>
+<label class="visually-hidden" aria-hidden="true">
+Leave this field blank
+<input name="website" type="text" tabindex="-1" autocomplete="off"/>
+</label>
 <div class="form-grid">
-<label>First name<input placeholder="John" required=""/></label>
-<label>Last name<input placeholder="Smith" required=""/></label>
-<label class="span-2">Company or vessel name<input placeholder="F/V Pacific Star"/></label>
-<label>Email<input placeholder="john@example.com" required="" type="email"/></label>
-<label>Phone<input placeholder="(604) 946-0281" type="tel"/></label>
-<label>Location<input placeholder="Ketchikan, AK"/></label>
-<label>Product interest<select><option>Commercial crab traps</option><option>Commercial prawn traps</option><option>Zinc anodes</option><option>Prawn Super Bait pellets / oil</option><option>Accessories</option><option>Multiple products</option></select></label>
-<label class="span-2">Notes<textarea placeholder="Quantities, trap type, delivery timeline, sizing, or distributor preference..."></textarea></label>
+<label>First name<input name="firstName" placeholder="John" required="" autocomplete="given-name"/></label>
+<label>Last name<input name="lastName" placeholder="Smith" required="" autocomplete="family-name"/></label>
+<label class="span-2">Company or vessel name<input name="company" placeholder="F/V Pacific Star" autocomplete="organization"/></label>
+<label>Email<input name="email" placeholder="john@example.com" required="" type="email" autocomplete="email"/></label>
+<label>Phone<input name="phone" placeholder="(604) 946-0281" type="tel" autocomplete="tel"/></label>
+<label>Location<input name="location" placeholder="Ketchikan, AK" autocomplete="address-level2"/></label>
+<label>Product interest<select name="productInterest"><option>Commercial crab traps</option><option>Commercial prawn traps</option><option>Zinc anodes</option><option>Prawn Super Bait pellets / oil</option><option>Accessories</option><option>Multiple products</option></select></label>
+<label class="span-2">Notes<textarea name="notes" placeholder="Quantities, trap type, delivery timeline, sizing, or distributor preference..."></textarea></label>
 </div>
 <div class="form-actions">
-<button class="btn btn-primary" type="submit">Submit Inquiry</button>
-<div class="form-note">For quotes, email sales@ladnertraps.com or send the form. Commercial volume comes direct. Smaller sport orders can be routed to a distributor.</div>
+<button class="btn btn-primary" type="submit" id="submit-btn">Submit Inquiry</button>
+<div class="form-note">For quotes, email sales@ladnertraps.com or send the form. Commercial volume comes direct. Smaller sport orders can be routed to a distributor. This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Privacy Policy</a> and <a href="https://policies.google.com/terms" rel="noopener noreferrer" target="_blank">Terms of Service</a> apply.</div>
 </div>
+<p class="form-status" id="form-status" role="status" hidden></p>
 </form>
 </div>
 </section>
@@ -304,5 +319,6 @@
 </footer>
 <script src="js/nav.js" defer></script>
 <script src="js/site.js" defer></script>
+<script src="js/contact-form.js" defer></script>
 </body>
 </html>
