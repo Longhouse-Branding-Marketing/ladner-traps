@@ -1,10 +1,545 @@
 {
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/3-pound-spin-on-anode",
+      "destination": "/products/zinc-anodes",
+      "permanent": true
+    },
+    {
+      "source": "/3-pound-spin-on-anode/",
+      "destination": "/products/zinc-anodes",
+      "permanent": true
+    },
+    {
+      "source": "/3-tunnel-entrance-trap",
+      "destination": "/products/prawn-traps",
+      "permanent": true
+    },
+    {
+      "source": "/3-tunnel-entrance-trap/",
+      "destination": "/products/prawn-traps",
+      "permanent": true
+    },
+    {
+      "source": "/30-rigid-stainless-steel-recreational-dungeness-crab-trap",
+      "destination": "/products/crab-traps",
+      "permanent": true
+    },
+    {
+      "source": "/30-rigid-stainless-steel-recreational-dungeness-crab-trap/",
+      "destination": "/products/crab-traps",
+      "permanent": true
+    },
+    {
+      "source": "/alaska-mild-steel-plastic-coated-frame-pots",
+      "destination": "/products/crab-traps",
+      "permanent": true
+    },
+    {
+      "source": "/alaska-mild-steel-plastic-coated-frame-pots/",
+      "destination": "/products/crab-traps",
+      "permanent": true
+    },
+    {
+      "source": "/bait-rope-accessories",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/bait-rope-accessories/",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/bungee-hooks",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/bungee-hooks/",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/category/accessories",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/category/accessories/",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/category/bait",
+      "destination": "/products/prawn-bait",
+      "permanent": true
+    },
+    {
+      "source": "/category/bait/",
+      "destination": "/products/prawn-bait",
+      "permanent": true
+    },
+    {
+      "source": "/category/bait-rope-and-accessories",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/category/bait-rope-and-accessories/",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/category/black-cod",
+      "destination": "/products/black-cod-traps",
+      "permanent": true
+    },
+    {
+      "source": "/category/black-cod/",
+      "destination": "/products/black-cod-traps",
+      "permanent": true
+    },
+    {
+      "source": "/category/commercial-traps",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/category/commercial-traps/",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/category/crab",
+      "destination": "/products/crab-traps",
+      "permanent": true
+    },
+    {
+      "source": "/category/crab/",
+      "destination": "/products/crab-traps",
+      "permanent": true
+    },
+    {
+      "source": "/category/crab-recreational-traps",
+      "destination": "/products/crab-traps",
+      "permanent": true
+    },
+    {
+      "source": "/category/crab-recreational-traps/",
+      "destination": "/products/crab-traps",
+      "permanent": true
+    },
+    {
+      "source": "/category/prawn-shrimp-traps",
+      "destination": "/products/prawn-traps",
+      "permanent": true
+    },
+    {
+      "source": "/category/prawn-shrimp-traps/",
+      "destination": "/products/prawn-traps",
+      "permanent": true
+    },
+    {
+      "source": "/category/prawn-shrimp-traps-commercial",
+      "destination": "/products/prawn-traps",
+      "permanent": true
+    },
+    {
+      "source": "/category/prawn-shrimp-traps-commercial/",
+      "destination": "/products/prawn-traps",
+      "permanent": true
+    },
+    {
+      "source": "/category/recreational-traps",
+      "destination": "/contact#distributors",
+      "permanent": true
+    },
+    {
+      "source": "/category/recreational-traps/",
+      "destination": "/contact#distributors",
+      "permanent": true
+    },
+    {
+      "source": "/category/rope-and-twine",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/category/rope-and-twine/",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/category/uncategorized",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/category/uncategorized/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/category/zinc",
+      "destination": "/products/zinc-anodes",
+      "permanent": true
+    },
+    {
+      "source": "/category/zinc/",
+      "destination": "/products/zinc-anodes",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-traps",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-traps/",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/contact/",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/cotton-twine",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/cotton-twine/",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/dog-collar-snaps",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/dog-collar-snaps/",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/double-bottom-ring-stainless-steel-trap-with-bait-sock",
+      "destination": "/products/crab-traps",
+      "permanent": true
+    },
+    {
+      "source": "/double-bottom-ring-stainless-steel-trap-with-bait-sock/",
+      "destination": "/products/crab-traps",
+      "permanent": true
+    },
+    {
+      "source": "/dungeness-crab-traps-tunnel-entrances",
+      "destination": "/products/crab-traps",
+      "permanent": true
+    },
+    {
+      "source": "/dungeness-crab-traps-tunnel-entrances/",
+      "destination": "/products/crab-traps",
+      "permanent": true
+    },
+    {
+      "source": "/dungeness-crab-trigger-guard",
+      "destination": "/products/crab-traps",
+      "permanent": true
+    },
+    {
+      "source": "/dungeness-crab-trigger-guard/",
+      "destination": "/products/crab-traps",
+      "permanent": true
+    },
+    {
+      "source": "/king-tanner-dungeness-crab",
+      "destination": "/products/crab-traps",
+      "permanent": true
+    },
+    {
+      "source": "/king-tanner-dungeness-crab/",
+      "destination": "/products/crab-traps",
+      "permanent": true
+    },
+    {
+      "source": "/longline-snaps",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/longline-snaps/",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/nylon-seine-twine",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/nylon-seine-twine/",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/nylon-trap-closure-hooks",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/nylon-trap-closure-hooks/",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/our-history",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/our-history/",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/plankton-web-black-cod-bait-bag",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/plankton-web-black-cod-bait-bag/",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/polyethylene-bait-bag",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/polyethylene-bait-bag/",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/polyform-norway-buoys",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/polyform-norway-buoys/",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/recreational-traps",
+      "destination": "/contact#distributors",
+      "permanent": true
+    },
+    {
+      "source": "/recreational-traps/",
+      "destination": "/contact#distributors",
+      "permanent": true
+    },
+    {
+      "source": "/rigid-prawn-trap",
+      "destination": "/products/prawn-traps",
+      "permanent": true
+    },
+    {
+      "source": "/rigid-prawn-trap/",
+      "destination": "/products/prawn-traps",
+      "permanent": true
+    },
+    {
+      "source": "/rope",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/rope/",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/sablefish-blackcod",
+      "destination": "/products/black-cod-traps",
+      "permanent": true
+    },
+    {
+      "source": "/sablefish-blackcod/",
+      "destination": "/products/black-cod-traps",
+      "permanent": true
+    },
+    {
+      "source": "/scotty-bait-cups",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/scotty-bait-cups/",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/shrimp-trap-bait-sock",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/shrimp-trap-bait-sock/",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/shrimp-trap-tunnel-rings",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/shrimp-trap-tunnel-rings/",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/spin-on-crab-trap-anode",
+      "destination": "/products/zinc-anodes",
+      "permanent": true
+    },
+    {
+      "source": "/spin-on-crab-trap-anode/",
+      "destination": "/products/zinc-anodes",
+      "permanent": true
+    },
+    {
+      "source": "/stainless-steel-prawnshrimp-traps-3-4-or-6-tunnel-entrances",
+      "destination": "/products/prawn-traps",
+      "permanent": true
+    },
+    {
+      "source": "/stainless-steel-prawnshrimp-traps-3-4-or-6-tunnel-entrances/",
+      "destination": "/products/prawn-traps",
+      "permanent": true
+    },
+    {
+      "source": "/standard-snubber",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/standard-snubber/",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/welcome-to-ladner-traps",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/welcome-to-ladner-traps/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/weld-on-zinc-anodes",
+      "destination": "/products/zinc-anodes",
+      "permanent": true
+    },
+    {
+      "source": "/weld-on-zinc-anodes/",
+      "destination": "/products/zinc-anodes",
+      "permanent": true
+    },
+    {
+      "source": "/woven-twine-steel-tunnel",
+      "destination": "/products/crab-traps",
+      "permanent": true
+    },
+    {
+      "source": "/woven-twine-steel-tunnel/",
+      "destination": "/products/crab-traps",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-content/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-includes/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-admin/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-login.php",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/xmlrpc.php",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/feed",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/feed/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/comments/feed",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/comments/feed/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:path*",
+      "destination": "/products",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/api/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "no-store" }
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
       ]
     }
   ]
