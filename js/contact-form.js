@@ -51,6 +51,9 @@
         const result = await response.json().catch(() => ({}));
 
         if (!response.ok) {
+          if (result.debug) {
+            console.error('Contact form reCAPTCHA debug:', result.debug);
+          }
           throw new Error(result.error || 'Submission failed. Please try again.');
         }
 
