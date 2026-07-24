@@ -2010,6 +2010,9 @@ body.is-nav-open .nav-backdrop {
   background: #f5f5f2 !important;
   border-color: var(--rule-soft) !important;
 }
+.products-overview .product-grid-overview-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 /* Restore subtle visible dividers between cards on the light background */
 .products-overview .product-grid-overview .product-card {
   outline: 1px solid var(--rule-soft);
