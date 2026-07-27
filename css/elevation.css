@@ -290,10 +290,16 @@ section.quote > .container::before {
 .lt-ticker::after { right: 0; background: linear-gradient(-90deg, var(--ink-deep), transparent); }
 .lt-ticker .lt-track {
   display: flex;
-  gap: 60px;
-  white-space: nowrap;
+  width: max-content;
   animation: lt-marquee 48s linear infinite;
   will-change: transform;
+}
+.lt-ticker .lt-run {
+  display: flex;
+  flex-shrink: 0;
+  gap: 60px;
+  padding-right: 60px;
+  white-space: nowrap;
 }
 .lt-ticker:hover .lt-track { animation-play-state: paused; }
 .lt-ticker span {
@@ -798,7 +804,7 @@ header { border-bottom: 1.5px solid var(--rule) !important; }
 }
 .navlinks > a:not(.btn),
 .navlinks > .nav-item .nav-parent {
-  padding: 24px 0 !important;
+  padding: 14px 0 !important;
   position: relative;
 }
 /* The Quote button keeps its own button padding, but still centers cleanly */
@@ -813,7 +819,7 @@ header { border-bottom: 1.5px solid var(--rule) !important; }
   content: "";
   position: absolute;
   left: 0; right: 0;
-  bottom: 18px;
+  bottom: 10px;
   height: 2px;
   background: var(--accent);
   transform: scaleX(0);
@@ -824,7 +830,9 @@ header { border-bottom: 1.5px solid var(--rule) !important; }
 .navlinks > .nav-item:hover .nav-parent::before { transform: scaleX(1); }
 
 .topbar { border-bottom: 1px solid var(--rule); }
-.topbar .container { padding: 12px 0 !important; }
+.topbar .container { padding: 7px 0 !important; }
+.site-header .brand img { width: 56px; height: 56px; }
+.site-header .nav { padding: 4px 0; }
 
 .hero-heritage-tag {
   display: inline-flex;
@@ -1978,17 +1986,24 @@ body.is-nav-open .nav-backdrop {
 /* ---------- Products overview grouped by category ---------- */
 .products-overview .products-cat {
   margin-top: 56px;
-  scroll-margin-top: 110px; /* so anchor jumps from the mega-menu land below the sticky header */
+  scroll-margin-top: 88px; /* so anchor jumps from the mega-menu land below the sticky header */
 }
 .products-overview .products-cat:first-of-type { margin-top: 32px; }
 .products-overview .products-cat-head {
   border-bottom: 1.5px solid var(--rule);
   padding-bottom: 18px;
   margin-bottom: 22px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
-  gap: 18px;
+  display: flex;
+  justify-content: space-between;
   align-items: end;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.products-overview .products-cat-head > div { flex: 1 1 280px; min-width: 0; }
+.products-overview .products-cat-head .trap-preview-link {
+  flex: 0 0 auto;
+  align-self: end;
+  margin-bottom: 4px;
 }
 .products-overview .products-cat-head h3 {
   font-family: "Barlow Condensed", Inter, sans-serif !important;
@@ -2019,7 +2034,7 @@ body.is-nav-open .nav-backdrop {
   outline-offset: 0;
 }
 @media (max-width: 1024px) {
-  .products-overview .products-cat-head { grid-template-columns: 1fr; }
+  .products-overview .products-cat-head { flex-direction: column; align-items: start; }
   .products-overview .product-grid-overview { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 640px) {
@@ -2192,4 +2207,175 @@ body.lt-lightbox-open { overflow: hidden; }
   }
   .lt-lightbox-prev { left: 18px; }
   .lt-lightbox-next { right: 18px; }
+}
+
+/* ---------- Post-launch revisions (Jul 2026) ---------- */
+
+/* Keep product photo plates consistently white (PNG transparency + hover) */
+.products .product-card .product-art,
+.products .product-card .product-photo,
+.mm-card-thumb {
+  background: #fff !important;
+}
+.mm-card-thumb img {
+  background: #fff;
+  object-fit: contain;
+}
+
+/* Active mega-menu category (hover preview) */
+.mega-subcats a.mm-subcat.is-active {
+  color: var(--accent);
+}
+.mega-subcats a.mm-subcat.is-active::after {
+  transform: scaleX(1);
+}
+.mega-subcats a.mm-subcat:first-child:not(.is-active) {
+  color: inherit;
+}
+.mega-subcats a.mm-subcat:first-child:not(.is-active)::after {
+  transform: scaleX(0);
+}
+.mega-subcats a.mm-subcat:first-child.is-active,
+.mega-subcats:not(:has(.mm-subcat.is-active)) a.mm-subcat:first-child {
+  color: var(--accent);
+}
+.mega-subcats:not(:has(.mm-subcat.is-active)) a.mm-subcat:first-child::after {
+  transform: scaleX(1);
+}
+
+/* Smaller sticky header offset for in-page anchors */
+#traps, #bait, #anodes, #accessories, #how-to-buy, #distributors, #quote, #history, #markets, #contact, #quality {
+  scroll-margin-top: 88px;
+}
+
+/* Mobile: enlarge vertical hero video to align with content margins;
+   contain wide quality video within the viewport */
+@media (max-width: 900px) {
+  .hero-video {
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+    aspect-ratio: 9 / 14;
+    max-height: min(72vh, 560px);
+    min-height: 280px;
+    overflow: hidden;
+  }
+  .hero-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .quality-video {
+    width: min(78vw, 280px);
+    max-width: 100%;
+    max-height: min(58vh, 420px);
+    overflow: hidden;
+  }
+  .quality-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+@media (max-width: 760px) {
+  .quality-video {
+    width: min(84vw, 300px);
+    max-height: min(56vh, 400px);
+  }
+}
+
+/* About map — mobile portrait: stack copy above a West-Coast-framed crop.
+   Landscape phones already show enough of the corridor; leave those alone. */
+@media (max-width: 900px) and (orientation: portrait) {
+  .territory-panel {
+    padding: 12px !important;
+    gap: 14px;
+  }
+  .territory-map {
+    display: flex;
+    flex-direction: column;
+    min-height: 0 !important;
+    overflow: hidden;
+    background: #0a274f;
+  }
+  .territory-map::before {
+    display: none;
+  }
+  .map-title-card {
+    position: static !important;
+    order: 1;
+    left: auto;
+    top: auto;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+  .territory-real-map {
+    order: 2;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 4 / 5;
+    max-height: min(62vh, 520px);
+    object-fit: cover;
+    /* Corridor sits on the right half of the landscape art */
+    object-position: 82% 42%;
+    display: block;
+  }
+  .map-scale-card {
+    position: static !important;
+    order: 3;
+    left: auto;
+    bottom: auto;
+    width: auto;
+    max-width: none !important;
+    margin: 12px 14px 14px;
+  }
+}
+
+@media (max-width: 480px) and (orientation: portrait) {
+  .territory-real-map {
+    aspect-ratio: 3 / 4;
+    object-position: 86% 40%;
+    max-height: min(58vh, 440px);
+  }
+  .map-title-card {
+    padding: 16px !important;
+  }
+  .map-title-card h3 {
+    font-size: 1.45rem !important;
+  }
+  .map-badge {
+    font-size: .7rem;
+    padding: 6px 8px;
+  }
+}
+
+/* Landscape phones / short viewports: shrink sticky chrome and video panels */
+@media (max-height: 500px) and (orientation: landscape) {
+  .topbar { display: none; }
+  .site-header .brand img { width: 40px; height: 40px; }
+  .site-header .nav { padding: 2px 0; }
+  .navlinks > a:not(.btn),
+  .navlinks > .nav-item .nav-parent {
+    padding: 10px 0 !important;
+  }
+  .hero-grid {
+    padding: 36px 0 48px !important;
+  }
+  .hero-video {
+    max-height: 70vh;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+  .quality-video {
+    width: min(42vw, 220px);
+    max-height: 55vh;
+  }
 }

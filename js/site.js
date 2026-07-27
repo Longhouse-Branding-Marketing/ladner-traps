@@ -29,6 +29,8 @@
     track.className = "lt-track";
 
     const buildRun = () => {
+      const run = document.createElement("div");
+      run.className = "lt-run";
       items.forEach((it) => {
         const span = document.createElement("span");
         const dot = document.createElement("span");
@@ -44,11 +46,13 @@
           const t = document.createTextNode(" " + it.t);
           span.appendChild(t);
         }
-        track.appendChild(span);
+        run.appendChild(span);
       });
+      track.appendChild(run);
     };
 
-    // Build the run twice so the marquee can loop seamlessly via translateX(-50%)
+    // Two equal-width runs so translateX(-50%) loops without a jump
+    // (flex gap on a flat track makes -50% misaligned).
     buildRun();
     buildRun();
 
@@ -125,7 +129,20 @@
       let target = null;
       for (const sel of cfg.before) {
         target = document.querySelector(sel);
-        if (target && target.parentNode) break;
+        if (!target || !target.parentNode) {
+          target = null;
+          continue;
+        }
+        // On the All Products overview, #accessories is a category section —
+        // don't insert a ticker between Anodes and Accessories.
+        if (
+          sel === "#accessories" &&
+          target.closest(".products-overview")
+        ) {
+          target = null;
+          continue;
+        }
+        break;
       }
       if (!target || !target.parentNode) return;
       const ticker = makeTicker(cfg.items, cfg.variant);

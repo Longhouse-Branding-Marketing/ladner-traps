@@ -1,5 +1,5 @@
 .env
 .env.local
 .vercel
-
-.vercel
+assets/videos/*-full.mp4
+_revisions_extract/
