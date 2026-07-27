@@ -831,7 +831,7 @@ header { border-bottom: 1.5px solid var(--rule) !important; }
 
 .topbar { border-bottom: 1px solid var(--rule); }
 .topbar .container { padding: 7px 0 !important; }
-.site-header .brand img { width: 56px; height: 56px; }
+.site-header .brand img { width: 68px; height: 68px; }
 .site-header .nav { padding: 4px 0; }
 
 .hero-heritage-tag {
