@@ -88,6 +88,7 @@ main { counter-reset: section; }
 section.quality,
 section.products,
 section.accessories-page,
+section.traps-page,
 section.bait-page,
 section.crab-traps,
 section.zinc-page,
@@ -2377,5 +2378,32 @@ body.lt-lightbox-open { overflow: hidden; }
   .quality-video {
     width: min(42vw, 220px);
     max-height: 55vh;
+  }
+}
+
+/* Traps category hub */
+.accessory-grid.traps-lineup-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+a.accessory-card {
+  text-decoration: none;
+  color: inherit;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+a.accessory-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 8px 8px 0 rgba(200,35,30,.28);
+}
+a.accessory-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+@media (max-width: 900px) {
+  .accessory-grid.traps-lineup-grid {
+    grid-template-columns: 1fr;
+  }
+  .traps-page .accessories-visual.photo-matrix {
+    grid-template-columns: 1fr;
+    min-height: 0;
   }
 }

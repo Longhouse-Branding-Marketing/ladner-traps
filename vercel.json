@@ -82,6 +82,16 @@
       "permanent": true
     },
     {
+      "source": "/category/traps",
+      "destination": "/products/traps",
+      "permanent": true
+    },
+    {
+      "source": "/category/traps/",
+      "destination": "/products/traps",
+      "permanent": true
+    },
+    {
       "source": "/category/bait-rope-and-accessories",
       "destination": "/products/accessories",
       "permanent": true

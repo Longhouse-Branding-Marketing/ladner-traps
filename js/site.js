@@ -170,6 +170,8 @@
         ".accessories-hero",
         ".accessory-card",
         ".accessories-proof",
+        ".traps-page .accessories-hero",
+        ".traps-lineup-grid .accessory-card",
         ".bait-hero-panel",
         ".bait-product-card",
         ".bait-proof-row",
