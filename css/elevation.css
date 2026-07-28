@@ -1967,6 +1967,16 @@ body.is-nav-open .nav-backdrop {
 
 /* ---------- About teaser block on home + products pages ---------- */
 .about-teaser .section-head { border-bottom: 1.5px solid var(--rule) !important; }
+.about-teaser .btn-secondary {
+  color: var(--ink-deep) !important;
+  border-color: var(--rule) !important;
+  background: transparent !important;
+}
+.about-teaser .btn-secondary:hover {
+  color: #fff !important;
+  background: var(--ink-deep) !important;
+  border-color: var(--ink-deep) !important;
+}
 
 /* ---------- Products overview grouped by category ---------- */
 .products-overview .products-cat {
