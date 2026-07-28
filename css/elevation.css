@@ -205,13 +205,6 @@ section.quote > .container::before {
 }
 .hero-actions { position: relative; z-index: 2; }
 .hero-actions .btn { padding: 16px 26px; font-size: .82rem; }
-.hero-actions .btn-primary::after {
-  content: "→";
-  display: inline-block;
-  margin-left: 4px;
-  transition: transform .2s ease;
-}
-.hero-actions .btn-primary:hover::after { transform: translateX(4px); }
 
 /* Hero video panel */
 .hero-video {
@@ -429,7 +422,7 @@ section.quote > .container::before {
 }
 .quality-point p { font-size: .96rem !important; margin-top: 14px !important; }
 
-/* ---------- Products: cards with index numerals + arrow link ---------- */
+/* ---------- Products: cards with index numerals ---------- */
 .products .product-grid { counter-reset: pcard; gap: 1px; background: var(--rule); border: 1.5px solid var(--rule); }
 .products .product-card {
   border: 0 !important;
@@ -473,8 +466,6 @@ section.quote > .container::before {
   color: var(--ink-deep) !important;
   font-weight: 900;
 }
-.products .chip a::after { content: "→"; transition: transform .2s ease; }
-.products .product-card:hover .chip a::after { transform: translateX(3px); }
 .products .product-actions a {
   display: inline-flex; align-items: center; gap: 6px;
   font-family: "Barlow Condensed", Inter, sans-serif;
@@ -487,7 +478,6 @@ section.quote > .container::before {
   padding-bottom: 3px;
   margin-top: 16px;
 }
-.products .product-actions a::after { content: "→"; }
 
 /* ---------- Section heads ---------- */
 .section-head {
@@ -1226,9 +1216,7 @@ footer a:hover { color: #fff !important; }
   border-bottom: 1.5px solid var(--ink-deep);
   padding-bottom: 3px;
 }
-.contact-card .map-link::after { content: "↗"; transition: transform .2s ease; }
 .contact-card .map-link:hover { color: var(--accent) !important; border-bottom-color: var(--accent); }
-.contact-card .map-link:hover::after { transform: translate(2px,-2px); }
 
 /* Business hours list */
 .contact-card .hours-list {
@@ -1271,10 +1259,6 @@ footer a:hover { color: #fff !important; }
   background: var(--ink-deep) !important;
   color: #fff !important;
   border: 1.5px solid var(--ink-deep);
-}
-.dist-card .dist-actions .btn::after {
-  content: " ↗";
-  letter-spacing: 0;
 }
 .dist-card .dist-actions .btn:hover {
   background: var(--accent) !important;
