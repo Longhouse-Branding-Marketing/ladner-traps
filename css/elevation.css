@@ -2316,11 +2316,10 @@ body.lt-lightbox-open { overflow: hidden; }
     width: 100%;
     height: auto !important;
     min-height: 0 !important;
-    aspect-ratio: 4 / 5;
-    max-height: min(62vh, 520px);
-    object-fit: cover;
-    /* Corridor sits on the right half of the landscape art */
-    object-position: 82% 42%;
+    aspect-ratio: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: center;
     display: block;
   }
   .map-scale-card {
@@ -2336,9 +2335,9 @@ body.lt-lightbox-open { overflow: hidden; }
 
 @media (max-width: 480px) and (orientation: portrait) {
   .territory-real-map {
-    aspect-ratio: 3 / 4;
-    object-position: 86% 40%;
-    max-height: min(58vh, 440px);
+    aspect-ratio: auto;
+    object-position: center;
+    max-height: none;
   }
   .map-title-card {
     padding: 16px !important;
