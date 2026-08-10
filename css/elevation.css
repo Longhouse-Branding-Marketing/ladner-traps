@@ -608,12 +608,12 @@ section.quote > .container::before {
 .territory-info {
   background: var(--ink-deep) !important;
   border: 1.5px solid var(--rule) !important;
-  padding: 38px 32px !important;
+  padding: 32px 30px !important;
 }
 .territory-info::after { display: none; }
 .territory-info h3 {
   font-family: "Barlow Condensed", Inter, sans-serif !important;
-  font-size: clamp(2rem, 3vw, 2.9rem) !important;
+  font-size: clamp(1.85rem, 2.6vw, 2.55rem) !important;
 }
 .coverage-stat {
   border-top: 1px solid rgba(255,255,255,.18) !important;
