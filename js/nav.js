@@ -62,10 +62,10 @@
       },
       {
         href: "/products/zinc-anodes",
-        img: "assets/z19-long-bar-marine-zinc-anode.png",
-        badge: "22 lb",
-        title: "Z-19 Bar Strap Anode",
-        desc: "Long bar strap anode for marine replacement.",
+        img: "assets/2.5lb-sport-zinc-anode.png",
+        badge: "2.5 lb",
+        title: "2.5 lb Sport Zinc Anode",
+        desc: "Square sport anode with ½\" bolt fitting.",
       },
       {
         href: "/products/zinc-anodes",
