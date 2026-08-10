@@ -58,7 +58,7 @@
         img: "assets/2.5lb-sport-zinc-anode.png",
         badge: "2.5 lb",
         title: "2.5 lb Sport Zinc Anode",
-        desc: "Square sport anode with ½\" bolt fitting.",
+        desc: "Square spin-on anode",
       },
       {
         href: "/products/zinc-anodes",
