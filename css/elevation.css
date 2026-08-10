@@ -213,7 +213,7 @@ section.quote > .container::before {
   position: relative;
   z-index: 2;
   min-height: 0;
-  max-height: 460px;
+  max-height: 520px;
   height: 100%;
   align-self: stretch;
 }
@@ -929,7 +929,7 @@ footer a:hover { color: #fff !important; }
   }
   .hero-video {
     height: auto;
-    max-height: 460px;
+    max-height: 520px;
     aspect-ratio: 16 / 9;
     min-height: 240px;
   }
