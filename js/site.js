@@ -226,11 +226,11 @@
     if (!el) return;
 
     const start = 1;
-    const target = 60;
+    const target = 62;
     const duration = 3400;
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      el.textContent = String(target);
+      el.textContent = target + "+";
       return;
     }
 
@@ -242,7 +242,7 @@
     function tick(now) {
       const t = Math.min((now - startTime) / duration, 1);
       const value = Math.round(start + (target - start) * easeOut(t));
-      el.textContent = String(value);
+      el.textContent = t < 1 ? String(value) : target + "+";
       if (t < 1) requestAnimationFrame(tick);
     }
 

@@ -525,6 +525,14 @@
     .dist-card p { margin-top: 10px; }
     .dist-card .tagline { color: var(--red); font-weight: 900; text-transform: uppercase; letter-spacing: .1em; font-size: .75rem; }
     .dist-logo-wrap { min-height: 88px; display: flex; align-items: center; justify-content: flex-start; margin-bottom: 22px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+    .dist-logo-wrap--dark {
+      background: #0b0b0b;
+      border-radius: 12px;
+      padding: 14px 16px 14px;
+      margin-bottom: 22px;
+      border-bottom: none;
+      min-height: 0;
+    }
     .dist-logo { max-height: 62px; max-width: 260px; width: auto; object-fit: contain; }
     .dist-card:nth-child(2) .dist-logo { max-height: 70px; }
     .dist-meta { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; padding: 9px 12px; border-radius: 999px; background: rgba(11,36,99,.07); color: var(--navy); font-size: .82rem; font-weight: 850; }

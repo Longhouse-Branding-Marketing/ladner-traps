@@ -21,13 +21,6 @@
         title: "Prawn Traps",
         desc: "Clean handling, repeated West Coast sets.",
       },
-      {
-        href: "/products/black-cod-traps",
-        img: "assets/commercial-black-cod-trap.webp",
-        badge: "Commercial",
-        title: "Black Cod Traps",
-        desc: "Built for deep sets and demanding seasons.",
-      },
     ],
     bait: [
       {

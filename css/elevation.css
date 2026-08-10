@@ -852,7 +852,7 @@ header { border-bottom: 1.5px solid var(--rule) !important; }
   color: #fff;
   text-shadow: 0 4px 12px rgba(0,0,0,.25);
   font-variant-numeric: tabular-nums;
-  min-width: 1.15em;
+  min-width: 1.6em;
   text-align: center;
 }
 .hero-heritage-tag .heritage-text {
@@ -2376,7 +2376,7 @@ body.lt-lightbox-open { overflow: hidden; }
 
 /* Traps category hub */
 .accessory-grid.traps-lineup-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 a.accessory-card {
   text-decoration: none;

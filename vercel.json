@@ -103,12 +103,22 @@
     },
     {
       "source": "/category/black-cod",
-      "destination": "/products/black-cod-traps",
+      "destination": "/products/traps",
       "permanent": true
     },
     {
       "source": "/category/black-cod/",
-      "destination": "/products/black-cod-traps",
+      "destination": "/products/traps",
+      "permanent": true
+    },
+    {
+      "source": "/products/black-cod-traps",
+      "destination": "/products/traps",
+      "permanent": true
+    },
+    {
+      "source": "/products/black-cod-traps/",
+      "destination": "/products/traps",
       "permanent": true
     },
     {
@@ -378,12 +388,12 @@
     },
     {
       "source": "/sablefish-blackcod",
-      "destination": "/products/black-cod-traps",
+      "destination": "/products/traps",
       "permanent": true
     },
     {
       "source": "/sablefish-blackcod/",
-      "destination": "/products/black-cod-traps",
+      "destination": "/products/traps",
       "permanent": true
     },
     {
