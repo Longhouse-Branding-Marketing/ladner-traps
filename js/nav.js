@@ -28,7 +28,7 @@
         img: "assets/products/csp-2993.jpg",
         badge: "Skretting",
         title: "Skretting Prawn Bait",
-        desc: "Premier Canadian distributor for Super Bait pellets.",
+        desc: "Premier Canadian distributor for Skretting prawn bait.",
       },
       {
         href: "/products/prawn-bait",
@@ -36,13 +36,6 @@
         badge: "Super Bait",
         title: "Prawn Oil",
         desc: "Prawn and crab oil for bait preparation.",
-      },
-      {
-        href: "/products/prawn-bait",
-        img: "assets/super-prawn-bait-pellets-pail.webp",
-        badge: "Pellets",
-        title: "Prawn Bait Pellets",
-        desc: "Prawn Super Bait pellets for commercial crews.",
       },
     ],
     anodes: [
