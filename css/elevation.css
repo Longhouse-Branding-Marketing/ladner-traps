@@ -800,7 +800,28 @@ header { border-bottom: 1.5px solid var(--rule) !important; }
   position: relative;
 }
 /* The Quote button keeps its own button padding, but still centers cleanly */
-.navlinks > a.btn { align-self: center; }
+.navlinks > a.btn,
+.navlinks > .nav-header-ctas { align-self: center; }
+
+.nav-header-ctas {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 4px;
+}
+.nav-header-ctas .btn { white-space: nowrap; }
+.navlinks a.btn-primary:hover { color: #fff; }
+.navlinks a.btn-light:hover { color: #fff; }
+
+@media (max-width: 1180px) and (min-width: 901px) {
+  .navlinks { gap: 18px !important; }
+  .nav-header-ctas { gap: 6px; }
+  .nav-header-ctas .btn {
+    padding-left: 14px;
+    padding-right: 14px;
+    font-size: .78rem;
+  }
+}
 
 /* Hover underline on top-level items (uses a pseudo so it doesn't change
    the box height and re-introduce a misalignment) */
@@ -1770,13 +1791,15 @@ body.is-nav-open .nav-backdrop {
     transition: transform 0.42s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s;
   }
   .navlinks > a:not(.btn),
-  .navlinks > .nav-item {
+  .navlinks > .nav-item,
+  .navlinks > .nav-header-ctas {
     opacity: 0;
     transform: translateX(-18px);
   }
   body.is-nav-open .navlinks > a:not(.btn),
   body.is-nav-open .navlinks > .nav-item,
-  body.is-nav-open .navlinks > a.btn {
+  body.is-nav-open .navlinks > a.btn,
+  body.is-nav-open .navlinks > .nav-header-ctas {
     animation: nav-drawer-item-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
   body.is-nav-open .navlinks > :nth-child(1) { animation-delay: 0.1s; }
@@ -1804,12 +1827,26 @@ body.is-nav-open .nav-backdrop {
     padding: 0 !important;
     border-bottom: 0;
   }
-  .navlinks > a.btn {
+  .navlinks > a.btn,
+  .navlinks > .nav-header-ctas {
     margin: 20px var(--nav-drawer-pad) 0;
     width: calc(100% - (var(--nav-drawer-pad) * 2));
     padding: 16px var(--nav-drawer-pad) !important;
     justify-content: center;
     border-bottom: 0;
+    box-sizing: border-box;
+  }
+  .navlinks > .nav-header-ctas {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 0 !important;
+  }
+  .navlinks > .nav-header-ctas .btn {
+    width: 100%;
+    padding: 16px var(--nav-drawer-pad) !important;
+    justify-content: center;
     box-sizing: border-box;
   }
   .navlinks > a:not(.btn)::after,
@@ -1905,11 +1942,21 @@ body.is-nav-open .nav-backdrop {
   }
   .nav-actions .btn {
     width: auto;
+    white-space: nowrap;
   }
   .nav-actions .mobile-toggle {
     min-height: 46px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .nav-actions .btn-light {
+    background: #fff !important;
+    color: var(--ink-deep);
+    border-color: var(--ink-deep);
+  }
+  .nav-actions .btn-light:hover {
+    background: var(--ink-deep) !important;
+    color: #fff;
   }
 }
 
@@ -1929,13 +1976,15 @@ body.is-nav-open .nav-backdrop {
   }
   body.is-nav-open .navlinks > a:not(.btn),
   body.is-nav-open .navlinks > .nav-item,
-  body.is-nav-open .navlinks > a.btn {
+  body.is-nav-open .navlinks > a.btn,
+  body.is-nav-open .navlinks > .nav-header-ctas {
     animation: none !important;
     opacity: 1;
     transform: none;
   }
   .navlinks > a:not(.btn),
-  .navlinks > .nav-item {
+  .navlinks > .nav-item,
+  .navlinks > .nav-header-ctas {
     opacity: 1;
     transform: none;
   }
