@@ -844,7 +844,7 @@ header { border-bottom: 1.5px solid var(--rule) !important; }
 
 .topbar { border-bottom: 1px solid var(--rule); }
 .topbar .container { padding: 7px 0 !important; }
-.site-header .brand img { width: 68px; height: 68px; }
+.site-header .brand img { width: 96px; height: 96px; }
 .site-header .nav { padding: 4px 0; }
 
 .hero-heritage-tag {
@@ -1754,6 +1754,7 @@ body.is-nav-open .nav-backdrop {
     grid-column: 2;
     justify-self: center;
   }
+  .site-header .brand img { width: 80px; height: 80px; }
   .nav-actions {
     grid-column: 3;
     justify-self: end;
@@ -2031,7 +2032,7 @@ body.is-nav-open .nav-backdrop {
 /* ---------- Products overview grouped by category ---------- */
 .products-overview .products-cat {
   margin-top: 56px;
-  scroll-margin-top: 88px; /* so anchor jumps from the mega-menu land below the sticky header */
+  scroll-margin-top: 120px; /* so anchor jumps from the mega-menu land below the sticky header */
 }
 .products-overview .products-cat:first-of-type { margin-top: 32px; }
 .products-overview .products-cat-head {
@@ -2290,7 +2291,7 @@ body.lt-lightbox-open { overflow: hidden; }
 
 /* Smaller sticky header offset for in-page anchors */
 #traps, #bait, #anodes, #accessories, #how-to-buy, #distributors, #quote, #history, #markets, #contact, #quality {
-  scroll-margin-top: 88px;
+  scroll-margin-top: 120px;
 }
 
 /* Mobile: enlarge vertical hero video to align with content margins;
@@ -2404,7 +2405,7 @@ body.lt-lightbox-open { overflow: hidden; }
 /* Landscape phones / short viewports: shrink sticky chrome and video panels */
 @media (max-height: 500px) and (orientation: landscape) {
   .topbar { display: none; }
-  .site-header .brand img { width: 40px; height: 40px; }
+  .site-header .brand img { width: 52px; height: 52px; }
   .site-header .nav { padding: 2px 0; }
   .navlinks > a:not(.btn),
   .navlinks > .nav-item .nav-parent {
